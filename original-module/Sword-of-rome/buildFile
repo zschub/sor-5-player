@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VASSAL.build.GameModule VassalVersion="2.6.1" name="Sword of Rome" version="4.0">
+<VASSAL.build.module.BasicCommandEncoder/>
+<VASSAL.build.module.Documentation>
+<VASSAL.build.module.documentation.HelpFile fileName="Sword of Rome vassal instructions.htm" fileType="archive" title="Sword of Rome Instructions"/>
+<VASSAL.build.module.documentation.AboutScreen fileName="/images/Splash.gif" title="About VASSAL"/>
+<VASSAL.build.module.documentation.HelpFile fileName="/help/Intro.txt" fileType="resource" title="Quick Start"/>
+<VASSAL.build.module.documentation.HelpFile fileName="docs/UsersGuide/index.htm" fileType="file" title="User's Guide"/>
+</VASSAL.build.module.Documentation>
+<VASSAL.build.module.PlayerRoster buttonIcon="Retire" buttonText="Retire" buttonToolTip="Allow another player to take your side in this game">
+<entry>Romans</entry>
+<entry>Greeks</entry>
+<entry>Gauls</entry>
+<entry>Etruscan-Samnites</entry>
+<entry>&lt;referee&gt;</entry>
+<entry>&lt;referee2&gt;</entry>
+<entry>2-Player-Rome-ES</entry>
+<entry>2-Player-Greece-Gaul</entry>
+</VASSAL.build.module.PlayerRoster>
+<VASSAL.build.module.GlobalOptions autoReport="Never" centerOnMove="Always" nonOwnerUnmaskable="Never" playerIdFormat="$playerSide$ ($playerName$)" promptString="Opponents can unmask my pieces">
+<option name="stepIcon">/images/StepForward16.gif</option>
+<option name="undoIcon">/images/Undo16.gif</option>
+<option name="stepHotKey">34,0</option>
+<option name="serverControlsIcon">/images/connect.gif</option>
+<option name="serverControlsHotKey">83,520</option>
+</VASSAL.build.module.GlobalOptions>
+<VASSAL.build.module.Map allowMultiple="true" buttonName="Map" changeFormat="$message$" color="0,0,0" createFormat="" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="false" mapName="MainMap" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="" moveWithinFormat="" thickness="3">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<setup>MainMapBoardPicker	Roman Discards	0	0	Greek Discards	0	1	E-S Discards	0	2	Gallic Discards	0	3	Removals	0	4	Elections	0	5	Rm-Discards-label	1	0	greek-discards-label	1	1	es-discards-label	1	2	gallic-discards-label	1	3	removal-discards-label	1	4	elections-label	1	5	Sword of Rome Map	2	0</setup>
+<VASSAL.build.module.map.boardPicker.Board image="Sword Map-Final.jpg" name="Sword of Rome Map" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="roman-discards.gif" name="Roman Discards" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="greek-discards.gif" name="Greek Discards" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="gallic-discards.gif" name="Gallic Discards" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="e-s-discards.gif" name="E-S Discards" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="roman-elections-deck.gif" name="Elections" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="roman-discards-label.gif" name="Rm-Discards-label" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="removals.gif" name="Removals" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="greek-discards-label.gif" name="greek-discards-label" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="gallic-discards-label.gif" name="gallic-discards-label" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="e-s-discards-label.gif" name="es-discards-label" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="removals-label.gif" name="removal-discards-label" reversible="false"/>
+<VASSAL.build.module.map.boardPicker.Board image="elections-label.gif" name="elections-label" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="8" exSepY="12" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.HidePiecesButton buttonText="" hiddenIcon="/images/globe_selected.gif" hotkey="72,130" showingIcon="/images/globe_unselected.gif" tooltip="Hide all pieces on this map"/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="90,130" zoomOutKey="65,130" zoomStart="1"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Always" faceDownFormat="" height="380" name="Rome Discard Deck" owningBoard="Roman Discards" reshufflable="true" reshuffleCommand="Send all cards to Roman Deck for reshuffling" reshuffleMessage="" reshuffleTarget="Rome Cards" reverseFormat="" reversible="false" shuffle="Never" shuffleFormat="" width="260" x="139" y="195"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Always" faceDownFormat="" height="380" name="Greece Discard Deck" owningBoard="Greek Discards" reshufflable="true" reshuffleCommand="Send all cards to Greek Deck for reshuffling" reshuffleMessage="" reshuffleTarget="Greek Cards" reverseFormat="" reversible="false" shuffle="Never" shuffleFormat="" width="260" x="139" y="195"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Always" faceDownFormat="" height="380" name="Gallic Discard Deck" owningBoard="Gallic Discards" reshufflable="true" reshuffleCommand="Send all cards to Gallic Deck for reshuffling" reshuffleMessage="" reshuffleTarget="Gallic Cards" reverseFormat="" reversible="false" shuffle="Never" shuffleFormat="" width="260" x="139" y="195"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Always" faceDownFormat="" height="380" name="E-S Discard Deck" owningBoard="E-S Discards" reshufflable="true" reshuffleCommand="Send all cards to E-S Deck for reshuffling" reshuffleMessage="" reshuffleTarget="E-S Cards" reverseFormat="" reversible="false" shuffle="Never" shuffleFormat="" width="260" x="139" y="195"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="255,51,51" draw="true" drawFaceUp="false" faceDown="Never" faceDownFormat="" height="70" name="Roman Elections" owningBoard="Elections" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="" reshuffleTarget="" reverseFormat="" reversible="false" shuffle="Always" shuffleFormat="" width="70" x="132" y="228"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Always" faceDownFormat="" height="380" name="Removals Deck" owningBoard="Removals" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="" reshuffleTarget="" reverseFormat="" reversible="false" shuffle="Never" shuffleFormat="" width="260" x="139" y="195"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.Map>
+<VASSAL.build.module.PrototypesContainer>
+<VASSAL.build.module.PrototypeDefinition name="Counters">+/null/delete;Delete;D	piece;;;;/	null;0;0</VASSAL.build.module.PrototypeDefinition>
+</VASSAL.build.module.PrototypesContainer>
+<VASSAL.build.module.PieceWindow hidden="false" hotkey="" icon="" name="Counters" text="Counters">
+<VASSAL.build.widget.TabWidget entryName="Tab">
+<VASSAL.build.widget.ListWidget entryName="Markers">
+<VASSAL.build.widget.PieceSlot entryName="loyalty-1" height="62" width="63">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;marker-city1.jpg;loyalty-1/	\	null;41;75</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="control" height="83" width="83">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;marker-neutral-control.jpg;control/	\	null;109;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="siege-0-1" height="50" width="51">+/null/delete;Delete;68,130	emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;marker-siege1.jpg;;true\	piece;;;marker-siege0.jpg;siege-0-1/	-1;\	null;109;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="siege-1-2" height="49" width="48">+/null/delete;Delete;68,130	emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;marker-siege2.jpg;;true\	piece;;;marker-siege1.jpg;siege-1-2/	-1;\	null;109;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="Game-Turn" height="50" width="50">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;marker-turn.jpg;Game-Turn/	\	null;109;103</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Romans">
+<VASSAL.build.widget.PieceSlot entryName="RM-CU-1-2" height="62" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;RM-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;RM-CU1.jpg;RM-CU-1-2/-1;	\	\\	null;124;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-CU-3-5" height="62" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;RM-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;RM-CU3.jpg;RM-CU-3-5/-1;	\	\\	null;124;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-CU-9-10" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;RM-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;RM-CU9.jpg;RM-CU-9-10/-1	\	\\	null;72;73</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Loyalty-1-2" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;RM-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;RM-city1.jpg;RM-Loyalty-1-2/-1	\	\\	null;72;73</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Loyalty-2-3" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;RM-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;RM-city2.jpg;RM-Loyalty-2-3/-1	\	\\	null;72;73</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-licinian" height="63" width="63">+/null/delete;Delete;D	piece;;;RM-licinian-sextian.jpg;RM-licinian/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-punic" height="63" width="62">+/null/delete;Delete;D	piece;;;RM-punic-envoys.jpg;RM-punic/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-servian" height="62" width="62">+/null/delete;Delete;D	piece;;;RM-servian-wall.jpg;RM-servian/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-appian" height="62" width="62">+/null/delete;Delete;D	piece;;;RM-appian-way.jpg;RM-appian/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-carth-allies" height="63" width="63">+/null/delete;Delete;D	piece;;;RM-carthage-allies-rome.jpg;RM-carth-allies/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-duoviri-cancel" height="62" width="62">+/null/delete;Delete;D	piece;;;RM-duoviri-navales-cancel.jpg;RM-duoviri-cancel/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-duoviri" height="62" width="63">+/null/delete;Delete;D	piece;;;RM-duoviri-navales.jpg;RM-duoviri/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-foedus" height="63" width="62">+/null/delete;Delete;D	piece;;;RM-foedus.jpg;RM-foedus/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-victory-points" height="51" width="51">+/null/delete;Delete;68,130	piece;;;RM-victory-points.jpg;RM-victory-points/	null;124;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-alliance" height="68" width="68">+/null/delete;Delete;68,130	piece;;;marker-RM-alliance.jpg;RM-alliance/	null;124;115</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-control" height="84" width="83">+/null/delete;Delete;D	piece;;;marker-RM-control.jpg;RM-control/	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Greeks">
+<VASSAL.build.widget.PieceSlot entryName="GR-CU-1-2" height="63" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;GR-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;GR-CU1.jpg;GR-CU-1-2/-1;	\	\\	null;135;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-CU-3-5" height="62" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;GR-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;GR-CU3.jpg;GR-CU-3-5/-1;	\	\\	null;135;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-CU-9-10" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;GR-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;GR-CU9.jpg;GR-CU-9-10/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Loyalty-1-2" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;GR-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;GR-city1.jpg;GR-Loyalty-1-2/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Loyalty-2-3" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;GR-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;GR-city2.jpg;GR-Loyalty-2-3/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-epipolae" height="62" width="62">+/null/delete;Delete;D	piece;;;GR-heights-epipolae.jpg;GR-epipolae/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-elephants" height="62" width="62">+/null/delete;Delete;D	piece;;;GR-indian-war-eleph.jpg;GR-elephants/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-magna-graecia" height="62" width="63">+/null/delete;Delete;D	piece;;;GR-minor-graecia.jpg;GR-magna-graecia/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-victory-points" height="50" width="49">+/null/delete;Delete;68,130	piece;;;GR-victory-points.jpg;GR-victory-points/	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-control" height="86" width="83">+/null/delete;Delete;68,130	piece;;;marker-GR-control.jpg;GR-control/	null;135;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-alliance" height="67" width="69">+/null/delete;Delete;68,130	piece;;;marker-GR-alliance.jpg;GR-alliance/	null;135;103</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Gauls">
+<VASSAL.build.widget.PieceSlot entryName="GAUL-CU-1-2" height="63" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;GAUL-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;GAUL-CU1.jpg;GAUL-CU-1-2/-1;	\	\\	null;140;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-CU-3-5" height="62" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;GAUL-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;GAUL-CU3.jpg;GAUL-CU-3-5/-1;	\	\\	null;140;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-CU-9-10" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;GAUL-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;GAUL-CU9.jpg;GAUL-CU-9-10/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-Loyalty-1" height="62" width="62">+/null/delete;Delete;D	piece;;;GAUL-city1.jpg;GAUL-Loyalty-1/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-victory-points" height="50" width="50">+/null/delete;Delete;68,130	piece;;;GAUL-victory-points.jpg;GAUL-victory-points/	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-alliance" height="66" width="68">+/null/delete;Delete;68,130	piece;;;marker-GAUL-alliance.jpg;GAUL-alliance/	null;140;115</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-control" height="80" width="83">+/null/delete;Delete;68,130	piece;;;marker-GAUL-control.jpg;GAUL-control/	null;140;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GAUL-Plunder" height="75" width="74">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;marker-gallic-plunder.jpg;GAUL-Plunder/	\	null;140;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="siege-train" height="63" width="62">+/null/delete;Delete;D	piece;;;marker-siege-train-captured.jpg;siege-train/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="terror-stricken" height="63" width="62">+/null/delete;Delete;D	piece;;;marker-terror-stricken.jpg;terror-stricken/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="wild-beasts" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;marker-wild-beasts-immune.jpg	delete;Delete;D\	piece;;;marker-wild-beasts.jpg;wild-beasts/-1	\	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Etruscans">
+<VASSAL.build.widget.PieceSlot entryName="ET-CU-1-2" height="61" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;ES-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;ES-CU1.jpg;ET-CU-1-2/-1;	\	\\	null;131;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-CU-3-5" height="63" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;ES-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;ES-CU3.jpg;ET-CU-3-5/-1;	\	\\	null;131;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-CU-9-10" height="61" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;ES-CU10.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;ES-CU9.jpg;ET-CU-9-10/-1;	\	\\	null;131;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-Loyalty-1-2" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;ES-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;ES-city1.jpg;ET-Loyalty-1-2/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-Loyalty-2-3" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;ES-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;ES-city2.jpg;ET-Loyalty-2-3/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-coalition" height="63" width="62">+/null/delete;Delete;68,130	piece;;;ES-grand-coalition.jpg;ET-coalition/	null;131;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-mines-depleted" height="63" width="62">+/null/delete;Delete;D	piece;;;ES-mines-depleted.jpg;ET-mines-depleted/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-Punic-naval" height="63" width="63">+/null/delete;Delete;D	piece;;;ES-punic-naval-victory.jpg;ET-Punic-naval/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-victory-points" height="50" width="49">+/null/delete;Delete;68,130	piece;;;ES-victory-points.jpg;ET-victory-points/	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-alliance" height="67" width="67">+/null/delete;Delete;68,130	piece;;;marker-ES-alliance.jpg;ET-alliance/	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ET-control" height="82" width="84">+/null/delete;Delete;D	piece;;;marker-ES-control.jpg;ET-control/	null;94;81</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Samnites">
+<VASSAL.build.widget.PieceSlot entryName="SAM-CU-1-2" height="62" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;SAM-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;SAM-CU1.jpg;SAM-CU-1-2/-1;	\	\\	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-CU-3-5" height="62" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;SAM-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;SAM-CU3.jpg;SAM-CU-3-5/-1;	\	\\	null;134;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-CU-9-10" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;SAM-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;SAM-CU9.jpg;SAM-CU-9-10/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-Loyalty-1-2" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;SAM-LDR-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;SAM-LDR-city1.jpg;SAM-Loyalty-1-2/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-Loyalty-2-3" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;SAM-LDR-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;SAM-LDR-city2.jpg;SAM-Loyalty-2-3/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-control" height="63" width="63">+/null/delete;Delete;D	piece;;;marker-SAM-control.jpg;SAM-control/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-ES-alliance" height="63" width="62">+/null/delete;Delete;D	piece;;;marker-ES-alliance.jpg;SAM-ES-alliance/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-ES-victory-points" height="62" width="62">+/null/delete;Delete;D	piece;;;ES-victory-points.jpg;SAM-ES-victory-points/	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Carthaginians">
+<VASSAL.build.widget.PieceSlot entryName="CA-CU-1-2" height="63" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;CA-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;CA-CU1.jpg;CA-CU-1-2/-1;	\	\\	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-CU-3-5" height="62" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;CA-CU5.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;CA-CU3.jpg;CA-CU-3-5/-1;	\	\\	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-CU-9-10" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;CA-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;CA-CU9.jpg;CA-CU-9-10/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-Loyalty-1-2" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;CA-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;CA-city1.jpg;CA-Loyalty-1-2/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-Loyalty-2-3" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;CA-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;CA-city2.jpg;CA-Loyalty-2-3/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-militia-1-2" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;CA-militia2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;CA-militia1.jpg;CA-militia-1-2/-1	\	\\	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-militia-2-3" height="62" width="63">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;CA-militia3.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;CA-militia2.jpg;CA-militia-2-3/-1;	\	\\	null;178;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-victory-points" height="62" width="62">+/null/delete;Delete;D	piece;;;CA-victory-points.jpg;CA-victory-points/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-alliance" height="62" width="62">+/null/delete;Delete;D	piece;;;marker-CA-alliance.jpg;CA-alliance/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-control" height="63" width="63">+/null/delete;Delete;D	piece;;;marker-CA-control.jpg;CA-control/	null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+<VASSAL.build.widget.ListWidget entryName="Minor Powers">
+<VASSAL.build.widget.PieceSlot entryName="TG-CU-1-2" height="63" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;TA-Gaul-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;TA-Gaul-CU1.jpg;TG-CU-1-2/-1;	\	\\	null;141;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-CU-3-5" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;TA-Gaul-CU5.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;TA-Gaul-CU3.jpg;TG-CU-3-5/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-CU-9-10" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;TA-Gaul-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;TA-Gaul-CU9.jpg;TG-CU-9-10/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-Loyalty-1" height="62" width="63">+/null/delete;Delete;D	piece;;;TA-Gaul-city1.jpg;TG-Loyalty-1/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-control" height="82" width="85">+/null/delete;Delete;D	piece;;;marker-TA-Gaul-control.jpg;TG-control/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-plunder" height="75" width="75">+/null/delete;Delete;D	piece;;;marker-TA-Gaul-plunder.jpg;TG-plunder/	null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="TG-activated" height="49" width="51">+/null/delete;Delete;D	piece;;;marker-tgauls-activated.jpg;TG-activated/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-CU-1-2" height="63" width="62">+/null/emb2;Flip;2;F;;2;;;2;;;;0;false;0;0;Volscii-CU2.jpg;;true	clone;Clone;67,130\	delete;Delete;68,130\\	piece;;;Volscii-CU1.jpg;VO-CU-1-2/-1;	\	\\	null;141;103</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-CU-3-5" height="62" width="62">+/null/emb;F;Flip;;;;;0;0;Volscii-CU5.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;Volscii-CU3.jpg;VO-CU-3-5/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-CU-9-10" height="62" width="63">+/null/emb;F;Flip;;;;;0;0;Volscii-CU10.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;Volscii-CU9.jpg;VO-CU-9-10/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-Loyalty-1-2" height="63" width="62">+/null/emb;F;Flip;;;;;0;0;Volscii-city2.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;Volscii-city1.jpg;VO-Loyalty-1-2/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-Loyalty-2-3" height="63" width="63">+/null/emb;F;Flip;;;;;0;0;Volscii-city3.jpg	clone;Clone;C\	delete;Delete;D\\	piece;;;Volscii-city2.jpg;VO-Loyalty-2-3/-1	\	\\	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-control" height="79" width="90">+/null/delete;Delete;D	piece;;;marker-gold-shield.jpg;VO-control/	null;94;81</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-activated" height="49" width="48">+/null/delete;Delete;D	piece;;;marker-volsci-activated.jpg;VO-activated/	null;94;81</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.widget.ListWidget>
+</VASSAL.build.widget.TabWidget>
+</VASSAL.build.module.PieceWindow>
+<VASSAL.build.module.Chatter/>
+<VASSAL.build.module.ChartWindow hotkey="" icon="/images/chart.gif" name="Charts" text="Charts">
+<VASSAL.build.widget.Chart chartName="Play-Aid Card" fileName="charts2.gif"/>
+</VASSAL.build.module.ChartWindow>
+<VASSAL.build.module.PrivateMap allowMultiple="true" buttonName="RM Deck" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Roman Deck" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$playerSide$ moves $previousLocation$ -&gt; $location$ *" side="Romans,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Rome-ES" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board image="roman-deck3.gif" name="RM Deck" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="3" exSepY="8" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Never" faceDownFormat="" height="320" name="Rome Cards" owningBoard="RM Deck" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="Event Deck shuffled" reshuffleTarget="Event Cards" reverseFormat="" reversible="false" shuffle="Always" shuffleFormat="Event Deck shuffled" width="250" x="232" y="310">
+<VASSAL.build.widget.CardSlot entryName="RM01" height="0" width="0">+/null/obs;70,130;RM01;Flip Card;P80,130;?	piece;;;RM-front;RM01/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM02" height="0" width="0">+/null/obs;70,130;RM02;Flip Card;P80,130;?	piece;;;RM-front;RM02/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM03" height="0" width="0">+/null/obs;70,130;RM03;Flip Card;P80,130;?	piece;;;RM-front;RM03/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM04" height="0" width="0">+/null/obs;70,130;RM04;Flip Card;P80,130;?	piece;;;RM-front;RM04/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM05" height="0" width="0">+/null/obs;70,130;RM05;Flip Card;P80,130;?	piece;;;RM-front;RM05/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM06" height="0" width="0">+/null/obs;70,130;RM06;Flip Card;P80,130;?	piece;;;RM-front;RM06/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM07" height="0" width="0">+/null/obs;70,130;RM07;Flip Card;P80,130;?	piece;;;RM-front;RM07/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM08" height="0" width="0">+/null/obs;70,130;RM08;Flip Card;P80,130;?	piece;;;RM-front;RM08/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM09" height="0" width="0">+/null/obs;70,130;RM09;Flip Card;P80,130;?	piece;;;RM-front;RM09/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM10" height="0" width="0">+/null/obs;70,130;RM10;Flip Card;P80,130;?	piece;;;RM-front;RM10/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM11" height="0" width="0">+/null/obs;70,130;RM11;Flip Card;P80,130;?	piece;;;RM-front;RM11/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM12" height="0" width="0">+/null/obs;70,130;RM12;Flip Card;P80,130;?	piece;;;RM-front;RM12/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM13" height="0" width="0">+/null/obs;70,130;RM13;Flip Card;P80,130;?	piece;;;RM-front;RM13/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM14" height="0" width="0">+/null/obs;70,130;RM14;Flip Card;P80,130;?	piece;;;RM-front;RM14/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM15" height="0" width="0">+/null/obs;70,130;RM15;Flip Card;P80,130;?	piece;;;RM-front;RM15/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM16" height="0" width="0">+/null/obs;70,130;RM16;Flip Card;P80,130;?	piece;;;RM-front;RM16/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM17" height="0" width="0">+/null/obs;70,130;RM17;Flip Card;P80,130;?	piece;;;RM-front;RM17/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM18" height="0" width="0">+/null/obs;70,130;RM18;Flip Card;P80,130;?	piece;;;RM-front;RM18/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM19" height="0" width="0">+/null/obs;70,130;RM19;Flip Card;P80,130;?	piece;;;RM-front;RM19/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM20" height="0" width="0">+/null/obs;70,130;RM20;Flip Card;P80,130;?	piece;;;RM-front;RM20/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM21" height="0" width="0">+/null/obs;70,130;RM21;Flip Card;P80,130;?	piece;;;RM-front;RM21/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM22" height="0" width="0">+/null/obs;70,130;RM22;Flip Card;P80,130;?	piece;;;RM-front;RM22/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM23" height="0" width="0">+/null/obs;70,130;RM23;Flip Card;P80,130;?	piece;;;RM-front;RM23/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM24" height="0" width="0">+/null/obs;70,130;RM24;Flip Card;P80,130;?	piece;;;RM-front;RM24/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM25" height="0" width="0">+/null/obs;70,130;RM25;Flip Card;P80,130;?	piece;;;RM-front;RM25/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM26" height="0" width="0">+/null/obs;70,130;RM26;Flip Card;P80,130;?	piece;;;RM-front;RM26/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM27" height="0" width="0">+/null/obs;70,130;RM27;Flip Card;P80,130;?	piece;;;RM-front;RM27/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM28" height="0" width="0">+/null/obs;70,130;RM28;Flip Card;P80,130;?	piece;;;RM-front;RM28/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM29" height="0" width="0">+/null/obs;70,130;RM29;Flip Card;P80,130;?	piece;;;RM-front;RM29/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM30" height="0" width="0">+/null/obs;70,130;RM30;Flip Card;P80,130;?	piece;;;RM-front;RM30/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM31" height="0" width="0">+/null/obs;70,130;RM31;Flip Card;P80,130;?	piece;;;RM-front;RM31/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM32" height="0" width="0">+/null/obs;70,130;RM32;Flip Card;P80,130;?	piece;;;RM-front;RM32/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM33" height="0" width="0">+/null/obs;70,130;RM33;Flip Card;P80,130;?	piece;;;RM-front;RM33/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM34" height="0" width="0">+/null/obs;70,130;RM34;Flip Card;P80,130;?	piece;;;RM-front;RM34/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM35" height="0" width="0">+/null/obs;70,130;RM35;Flip Card;P80,130;?	piece;;;RM-front;RM35/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM36" height="0" width="0">+/null/obs;70,130;RM36;Flip Card;P80,130;?	piece;;;RM-front;RM36/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM37" height="0" width="0">+/null/obs;70,130;RM37;Flip Card;P80,130;?	piece;;;RM-front;RM37/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="RM38" height="0" width="0">+/null/obs;70,130;RM38;Flip Card;P80,130;?	piece;;;RM-front;RM38/null	null;0;0</VASSAL.build.widget.CardSlot>
+</VASSAL.build.module.map.DrawPile>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PrivateMap>
+<VASSAL.build.module.PlayerHand allowMultiple="false" buttonName="RM Hand" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Roman Hand" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" side="Romans,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Rome-ES" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board height="500" name="RM Hand" reversible="false" width="500"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.HandMetrics bottom="40,0" disabled="false" down="37,0" exSepX="12" exSepY="0" top="38,0" unexSepX="12" unexSepY="0" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PlayerHand>
+<VASSAL.build.module.PrivateMap allowMultiple="true" buttonName="GA Deck" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Gallic Deck" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$playerSide$ moves $previousLocation$ -&gt; $location$ *" side="Gauls,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Greece-Gaul" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board image="gallic-deck3.gif" name="GA Deck" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="3" exSepY="8" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Never" faceDownFormat="" height="320" name="Gallic Cards" owningBoard="GA Deck" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="Event Deck shuffled" reshuffleTarget="Event Cards" reverseFormat="" reversible="false" shuffle="Always" shuffleFormat="Event Deck shuffled" width="250" x="232" y="310">
+<VASSAL.build.widget.CardSlot entryName="GA01" height="0" width="0">+/null/obs;77,130;GA01;Flip;P80,130;?	piece;;;GA-front;GA01/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA02" height="0" width="0">+/null/obs;77,130;GA02;Flip;P80,130;?	piece;;;GA-front;GA02/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA03" height="0" width="0">+/null/obs;77,130;GA03;Flip;P80,130;?	piece;;;GA-front;GA03/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA04" height="0" width="0">+/null/obs;77,130;GA04;Flip;P80,130;?	piece;;;GA-front;GA04/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA05" height="0" width="0">+/null/obs;77,130;GA05;Flip;P80,130;?	piece;;;GA-front;GA05/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA06" height="0" width="0">+/null/obs;77,130;GA06;Flip;P80,130;?	piece;;;GA-front;GA06/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA07" height="0" width="0">+/null/obs;77,130;GA07;Flip;P80,130;?	piece;;;GA-front;GA07/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA08" height="0" width="0">+/null/obs;77,130;GA08;Flip;P80,130;?	piece;;;GA-front;GA08/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA09" height="0" width="0">+/null/obs;77,130;GA09;Flip;P80,130;?	piece;;;GA-front;GA09/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA10" height="0" width="0">+/null/obs;77,130;GA10;Flip;P80,130;?	piece;;;GA-front;GA10/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA11" height="0" width="0">+/null/obs;77,130;GA11;Flip;P80,130;?	piece;;;GA-front;GA11/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA12" height="0" width="0">+/null/obs;77,130;GA12;Flip;P80,130;?	piece;;;GA-front;GA12/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA13" height="0" width="0">+/null/obs;77,130;GA13;Flip;P80,130;?	piece;;;GA-front;GA13/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA14" height="0" width="0">+/null/obs;77,130;GA14;Flip;P80,130;?	piece;;;GA-front;GA14/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA15" height="0" width="0">+/null/obs;77,130;GA15;Flip;P80,130;?	piece;;;GA-front;GA15/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA16" height="0" width="0">+/null/obs;77,130;GA16;Flip;P80,130;?	piece;;;GA-front;GA16/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA17" height="0" width="0">+/null/obs;77,130;GA17;Flip;P80,130;?	piece;;;GA-front;GA17/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA18" height="0" width="0">+/null/obs;77,130;GA18;Flip;P80,130;?	piece;;;GA-front;GA18/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA19" height="0" width="0">+/null/obs;77,130;GA19;Flip;P80,130;?	piece;;;GA-front;GA19/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA20" height="0" width="0">+/null/obs;77,130;GA20;Flip;P80,130;?	piece;;;GA-front;GA20/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA21" height="0" width="0">+/null/obs;77,130;GA21;Flip;P80,130;?	piece;;;GA-front;GA21/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA22" height="0" width="0">+/null/obs;77,130;GA22;Flip;P80,130;?	piece;;;GA-front;GA22/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA23" height="0" width="0">+/null/obs;77,130;GA23;Flip;P80,130;?	piece;;;GA-front;GA23/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA24" height="0" width="0">+/null/obs;77,130;GA24;Flip;P80,130;?	piece;;;GA-front;GA24/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA25" height="0" width="0">+/null/obs;77,130;GA25;Flip;P80,130;?	piece;;;GA-front;GA25/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA26" height="0" width="0">+/null/obs;77,130;GA26;Flip;P80,130;?	piece;;;GA-front;GA26/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA27" height="0" width="0">+/null/obs;77,130;GA27;Flip;P80,130;?	piece;;;GA-front;GA27/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA28" height="0" width="0">+/null/obs;77,130;GA28;Flip;P80,130;?	piece;;;GA-front;GA28/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA29" height="0" width="0">+/null/obs;77,130;GA29;Flip;P80,130;?	piece;;;GA-front;GA29/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA30" height="0" width="0">+/null/obs;77,130;GA30;Flip;P80,130;?	piece;;;GA-front;GA30/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA31" height="0" width="0">+/null/obs;77,130;GA31;Flip;P80,130;?	piece;;;GA-front;GA31/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA32" height="0" width="0">+/null/obs;77,130;GA32;Flip;P80,130;?	piece;;;GA-front;GA32/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA33" height="0" width="0">+/null/obs;77,130;GA33;Flip;P80,130;?	piece;;;GA-front;GA33/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA34" height="0" width="0">+/null/obs;77,130;GA34;Flip;P80,130;?	piece;;;GA-front;GA34/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA35" height="0" width="0">+/null/obs;77,130;GA35;Flip;P80,130;?	piece;;;GA-front;GA35/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA36" height="0" width="0">+/null/obs;77,130;GA36;Flip;P80,130;?	piece;;;GA-front;GA36/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA37" height="0" width="0">+/null/obs;77,130;GA37;Flip;P80,130;?	piece;;;GA-front;GA37/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GA38" height="0" width="0">+/null/obs;77,130;GA38;Flip;P80,130;?	piece;;;GA-front;GA38/null	null;0;0</VASSAL.build.widget.CardSlot>
+</VASSAL.build.module.map.DrawPile>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PrivateMap>
+<VASSAL.build.module.PlayerHand allowMultiple="false" buttonName="GA Hand" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Gallic Hand" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" side="Gauls,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Greece-Gaul" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board height="500" name="Gallic Hand" reversible="false" width="500"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.HandMetrics bottom="40,0" disabled="false" down="37,0" exSepX="12" exSepY="0" top="38,0" unexSepX="12" unexSepY="0" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PlayerHand>
+<VASSAL.build.module.PrivateMap allowMultiple="true" buttonName="GR Deck" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Greece Deck" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$playerSide$moves $previousLocation$ -&gt; $location$ *" side="Greeks,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Greece-Gaul" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board image="greek-deck3.gif" name="GR Deck" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="3" exSepY="8" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Never" faceDownFormat="" height="350" name="Greek Cards" owningBoard="GR Deck" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="Event Deck shuffled" reshuffleTarget="Event Cards" reverseFormat="" reversible="false" shuffle="Always" shuffleFormat="Event Deck shuffled" width="200" x="232" y="310">
+<VASSAL.build.widget.CardSlot entryName="GR01" height="0" width="0">+/null/obs;77,130;GR01;Flip;P80,130;?	piece;;;GR-front;GR01/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR02" height="0" width="0">+/null/obs;77,130;GR02;Flip;P80,130;?	piece;;;GR-front;GR02/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR03" height="0" width="0">+/null/obs;77,130;GR03;Flip;P80,130;?	piece;;;GR-front;GR03/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR04" height="0" width="0">+/null/obs;77,130;GR04;Flip;P80,130;?	piece;;;GR-front;GR04/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR05" height="0" width="0">+/null/obs;77,130;GR05;Flip;P80,130;?	piece;;;GR-front;GR05/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR06" height="0" width="0">+/null/obs;77,130;GR06;Flip;P80,130;?	piece;;;GR-front;GR06/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR07" height="0" width="0">+/null/obs;77,130;GR07;Flip;P80,130;?	piece;;;GR-front;GR07/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR08" height="0" width="0">+/null/obs;77,130;GR08;Flip;P80,130;?	piece;;;GR-front;GR08/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR09" height="0" width="0">+/null/obs;77,130;GR09;Flip;P80,130;?	piece;;;GR-front;GR09/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR10" height="0" width="0">+/null/obs;77,130;GR10;Flip;P80,130;?	piece;;;GR-front;GR10/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR11" height="0" width="0">+/null/obs;77,130;GR11;Flip;P80,130;?	piece;;;GR-front;GR11/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR12" height="0" width="0">+/null/obs;77,130;GR12;Flip;P80,130;?	piece;;;GR-front;GR12/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR13" height="0" width="0">+/null/obs;77,130;GR13;Flip;P80,130;?	piece;;;GR-front;GR13/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR14" height="0" width="0">+/null/obs;77,130;GR14;Flip;P80,130;?	piece;;;GR-front;GR14/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR15" height="0" width="0">+/null/obs;77,130;GR15;Flip;P80,130;?	piece;;;GR-front;GR15/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR16" height="0" width="0">+/null/obs;77,130;GR16;Flip;P80,130;?	piece;;;GR-front;GR16/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR17" height="0" width="0">+/null/obs;77,130;GR17;Flip;P80,130;?	piece;;;GR-front;GR17/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR18" height="0" width="0">+/null/obs;77,130;GR18;Flip;P80,130;?	piece;;;GR-front;GR18/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR19" height="0" width="0">+/null/obs;77,130;GR19;Flip;P80,130;?	piece;;;GR-front;GR19/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR20" height="0" width="0">+/null/obs;77,130;GR20;Flip;P80,130;?	piece;;;GR-front;GR20/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR21" height="0" width="0">+/null/obs;77,130;GR21;Flip;P80,130;?	piece;;;GR-front;GR21/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR22" height="0" width="0">+/null/obs;77,130;GR22;Flip;P80,130;?	piece;;;GR-front;GR22/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR23" height="0" width="0">+/null/obs;77,130;GR23;Flip;P80,130;?	piece;;;GR-front;GR23/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR24" height="0" width="0">+/null/obs;77,130;GR24;Flip;P80,130;?	piece;;;GR-front;GR24/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR25" height="0" width="0">+/null/obs;77,130;GR25;Flip;P80,130;?	piece;;;GR-front;GR25/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR26" height="0" width="0">+/null/obs;77,130;GR26;Flip;P80,130;?	piece;;;GR-front;GR26/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR27" height="0" width="0">+/null/obs;77,130;GR27;Flip;P80,130;?	piece;;;GR-front;GR27/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR28" height="0" width="0">+/null/obs;77,130;GR28;Flip;P80,130;?	piece;;;GR-front;GR28/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR29" height="0" width="0">+/null/obs;77,130;GR29;Flip;P80,130;?	piece;;;GR-front;GR29/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR30" height="0" width="0">+/null/obs;77,130;GR30;Flip;P80,130;?	piece;;;GR-front;GR30/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR31" height="0" width="0">+/null/obs;77,130;GR31;Flip;P80,130;?	piece;;;GR-front;GR31/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR32" height="0" width="0">+/null/obs;77,130;GR32;Flip;P80,130;?	piece;;;GR-front;GR32/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR33" height="0" width="0">+/null/obs;77,130;GR33;Flip;P80,130;?	piece;;;GR-front;GR33/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR34" height="0" width="0">+/null/obs;77,130;GR34;Flip;P80,130;?	piece;;;GR-front;GR34/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR35" height="0" width="0">+/null/obs;77,130;GR35;Flip;P80,130;?	piece;;;GR-front;GR35/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR36" height="0" width="0">+/null/obs;77,130;GR36;Flip;P80,130;?	piece;;;GR-front;GR36/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR37" height="0" width="0">+/null/obs;77,130;GR37;Flip;P80,130;?	piece;;;GR-front;GR37/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="GR38" height="0" width="0">+/null/obs;77,130;GR38;Flip;P80,130;?	piece;;;GR-front;GR38/null	null;0;0</VASSAL.build.widget.CardSlot>
+</VASSAL.build.module.map.DrawPile>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PrivateMap>
+<VASSAL.build.module.PlayerHand allowMultiple="false" buttonName="GR Hand" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Greek Hand" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" side="Greeks,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Greece-Gaul" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board height="500" name="Greece Hand" reversible="false" width="500"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.HandMetrics bottom="40,0" disabled="false" down="37,0" exSepX="12" exSepY="0" top="38,0" unexSepX="12" unexSepY="0" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PlayerHand>
+<VASSAL.build.module.PrivateMap allowMultiple="true" buttonName="E-S Deck" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="E-S Deck" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$playerSide$ moves $previousLocation$ -&gt; $location$ *" side="Etruscan-Samnites,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Rome-ES" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board image="e-s-deck3.gif" name="E-S Deck" reversible="false"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="3" exSepY="8" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.DrawPile allowMultiple="true" allowSelect="true" color="0,0,0" draw="true" drawFaceUp="false" faceDown="Never" faceDownFormat="" height="350" name="E-S Cards" owningBoard="E-S Deck" reshufflable="true" reshuffleCommand="Re-shuffle" reshuffleMessage="Event Deck shuffled" reshuffleTarget="Event Cards" reverseFormat="" reversible="false" shuffle="Always" shuffleFormat="Event Deck shuffled" width="200" x="228" y="315">
+<VASSAL.build.widget.CardSlot entryName="ES01" height="0" width="0">+/null/obs;77,130;ES01;Flip;P80,130;?	piece;;;ES-front;ES01/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES02" height="0" width="0">+/null/obs;77,130;ES02;Flip;P80,130;?	piece;;;ES-front;ES02/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES03" height="0" width="0">+/null/obs;77,130;ES03;Flip;P80,130;?	piece;;;ES-front;ES03/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES04" height="0" width="0">+/null/obs;77,130;ES04;Flip;P80,130;?	piece;;;ES-front;ES04/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES05" height="0" width="0">+/null/obs;77,130;ES05;Flip;P80,130;?	piece;;;ES-front;ES05/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES06" height="0" width="0">+/null/obs;77,130;ES06;Flip;P80,130;?	piece;;;ES-front;ES06/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES07" height="0" width="0">+/null/obs;77,130;ES07;Flip;P80,130;?	piece;;;ES-front;ES07/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES08" height="0" width="0">+/null/obs;77,130;ES08;Flip;P80,130;?	piece;;;ES-front;ES08/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES09" height="0" width="0">+/null/obs;77,130;ES09;Flip;P80,130;?	piece;;;ES-front;ES09/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES10" height="0" width="0">+/null/obs;77,130;ES10;Flip;P80,130;?	piece;;;ES-front;ES10/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES11" height="0" width="0">+/null/obs;77,130;ES11;Flip;P80,130;?	piece;;;ES-front;ES11/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES12" height="0" width="0">+/null/obs;77,130;ES12;Flip;P80,130;?	piece;;;ES-front;ES12/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES13" height="0" width="0">+/null/obs;77,130;ES13;Flip;P80,130;?	piece;;;ES-front;ES13/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES14" height="0" width="0">+/null/obs;77,130;ES14;Flip;P80,130;?	piece;;;ES-front;ES14/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES15" height="0" width="0">+/null/obs;77,130;ES15;Flip;P80,130;?	piece;;;ES-front;ES15/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES16" height="0" width="0">+/null/obs;77,130;ES16;Flip;P80,130;?	piece;;;ES-front;ES16/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES17" height="0" width="0">+/null/obs;77,130;ES17;Flip;P80,130;?	piece;;;ES-front;ES17/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES18" height="0" width="0">+/null/obs;77,130;ES18;Flip;P80,130;?	piece;;;ES-front;ES18/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES19" height="0" width="0">+/null/obs;77,130;ES19;Flip;P80,130;?	piece;;;ES-front;ES19/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES20" height="0" width="0">+/null/obs;77,130;ES20;Flip;P80,130;?	piece;;;ES-front;ES20/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES21" height="0" width="0">+/null/obs;77,130;ES21;Flip;P80,130;?	piece;;;ES-front;ES21/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES22" height="0" width="0">+/null/obs;77,130;ES22;Flip;P80,130;?	piece;;;ES-front;ES22/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES23" height="0" width="0">+/null/obs;77,130;ES23;Flip;P80,130;?	piece;;;ES-front;ES23/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES24" height="0" width="0">+/null/obs;77,130;ES24;Flip;P80,130;?	piece;;;ES-front;ES24/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES25" height="0" width="0">+/null/obs;77,130;ES25;Flip;P80,130;?	piece;;;ES-front;ES25/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES26" height="0" width="0">+/null/obs;77,130;ES26;Flip;P80,130;?	piece;;;ES-front;ES26/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES27" height="0" width="0">+/null/obs;77,130;ES27;Flip;P80,130;?	piece;;;ES-front;ES27/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES28" height="0" width="0">+/null/obs;77,130;ES28;Flip;P80,130;?	piece;;;ES-front;ES28/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES29" height="0" width="0">+/null/obs;77,130;ES29;Flip;P80,130;?	piece;;;ES-front;ES29/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES30" height="0" width="0">+/null/obs;77,130;ES30;Flip;P80,130;?	piece;;;ES-front;ES30/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES31" height="0" width="0">+/null/obs;77,130;ES31;Flip;P80,130;?	piece;;;ES-front;ES31/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES32" height="0" width="0">+/null/obs;77,130;ES32;Flip;P80,130;?	piece;;;ES-front;ES32/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES33" height="0" width="0">+/null/obs;77,130;ES33;Flip;P80,130;?	piece;;;ES-front;ES33/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES34" height="0" width="0">+/null/obs;77,130;ES34;Flip;P80,130;?	piece;;;ES-front;ES34/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES35" height="0" width="0">+/null/obs;77,130;ES35;Flip;P80,130;?	piece;;;ES-front;ES35/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES36" height="0" width="0">+/null/obs;77,130;ES36;Flip;P80,130;?	piece;;;ES-front;ES36/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES37" height="0" width="0">+/null/obs;77,130;ES37;Flip;P80,130;?	piece;;;ES-front;ES37/null	null;0;0</VASSAL.build.widget.CardSlot>
+<VASSAL.build.widget.CardSlot entryName="ES38" height="0" width="0">+/null/obs;77,130;ES38;Flip;P80,130;?	piece;;;ES-front;ES38/null	null;0;0</VASSAL.build.widget.CardSlot>
+</VASSAL.build.module.map.DrawPile>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PrivateMap>
+<VASSAL.build.module.PlayerHand allowMultiple="false" buttonName="E-S Hand" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="E-S Hand" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" side="Etruscan-Samnites,&lt;referee&gt;,&lt;referee2&gt;,2-Player-Rome-ES" thickness="3" visible="false">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board height="500" name="E-S Hand" reversible="false" width="500"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.HandMetrics bottom="40,0" disabled="false" down="37,0" exSepX="12" exSepY="0" top="38,0" unexSepX="12" unexSepY="0" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.PlayerHand>
+<VASSAL.build.module.Map allowMultiple="false" buttonName="Leaders" changeFormat="$message$" color="0,0,0" createFormat="$pieceName$ created in $location$" edgeHeight="0" edgeWidth="0" hotkey="" icon="" launch="true" mapName="Leaders" markMoved="Always" markUnmovedIcon="/images/unmoved.gif" moveKey="" moveToFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" moveWithinFormat="$pieceName$ moves $previousLocation$ -&gt; $location$ *" thickness="3">
+<VASSAL.build.module.map.BoardPicker addColumnText="Add column" addRowText="Add row" boardPrompt="Select board" slotHeight="125" slotScale="0.2" slotWidth="350" title="Choose Boards">
+<VASSAL.build.module.map.boardPicker.Board height="500" name="Leaders" reversible="false" width="500"/>
+</VASSAL.build.module.map.BoardPicker>
+<VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="8" exSepY="12" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
+<VASSAL.build.module.map.ForwardToKeyBuffer/>
+<VASSAL.build.module.map.Scroller/>
+<VASSAL.build.module.map.ForwardToChatter/>
+<VASSAL.build.module.map.MenuDisplayer/>
+<VASSAL.build.module.map.MapCenterer/>
+<VASSAL.build.module.map.StackExpander/>
+<VASSAL.build.module.map.PieceMover/>
+<VASSAL.build.module.map.KeyBufferer/>
+<VASSAL.build.module.map.ImageSaver/>
+<VASSAL.build.module.map.CounterDetailViewer bgColor="255,255,255" borderWidth="0" counterReportFormat="" delay="700" display="from top-most layer only" emptyHexReportForma="$LocationName$" fgColor="0,0,0" fontSize="9" graphicsZoom="1.0" hotkey="32,130" layerList="" minDisplayPieces="2" propertyFilter="" showDeck="false" showNoStack="false" showgraph="true" showgraphsingle="false" showtext="false" showtextsingle="false" summaryReportFormat="$LocationName$" version="" zoomlevel="1.0"/>
+<VASSAL.build.module.map.SetupStack name="RM-Ldr" owningBoard="Leaders" x="120" y="200">
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Veturius" height="63" width="63">+/null/piece;;;RM-LDR-veturius.jpg;RM-Ldr-Veturius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Valerius" height="63" width="62">+/null/piece;;;RM-LDR-valerius.jpg;RM-Ldr-Valerius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Rulianus" height="63" width="62">+/null/piece;;;RM-LDR-rulianus.jpg;RM-Ldr-Rulianus/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Philo" height="63" width="63">+/null/piece;;;RM-LDR-philo.jpg;RM-Ldr-Philo/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-MinorB" height="62" width="63">+/null/piece;;;RM-LDR-minorB.jpg;RM-Ldr-MinorB/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-MinorA" height="62" width="62">+/null/piece;;;RM-LDR-minorA.jpg;RM-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Maximus" height="62" width="63">+/null/piece;;;RM-LDR-maximus.jpg;RM-Ldr-Maximus/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Manlius" height="63" width="63">+/null/piece;;;RM-LDR-manlius.jpg;RM-Ldr-Manlius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Laevinius" height="63" width="62">+/null/piece;;;RM-LDR-laevinrius.jpg;RM-Ldr-Laevinius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Claudius" height="63" width="62">+/null/piece;;;RM-LDR-claudius.jpg;RM-Ldr-Claudius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Camilus" height="62" width="62">+/null/piece;;;RM-LDR-camilus.jpg;RM-Ldr-Camilus/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Aemilius" height="63" width="62">+/null/piece;;;RM-LDR-aemilius.jpg;RM-Ldr-Aemilius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="RM-Ldr-Dictator" height="62" width="62">+/null/piece;;;RM-LDR-dictator.jpg;RM-Ldr-Dictator/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="GR-Ldr" owningBoard="Leaders" x="210" y="200">
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Timoleon" height="63" width="63">+/null/piece;;;GR-LDR-timoleon.jpg;GR-Ldr-Timoleon/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Pyrrhus" height="63" width="62">+/null/piece;;;GR-LDR-pyrrhus.jpg;GR-Ldr-Pyrrhus/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-MinorB" height="63" width="62">+/null/piece;;;GR-LDR-MinorB.jpg;GR-Ldr-MinorB/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-MinorA" height="63" width="63">+/null/piece;;;GR-LDR-MinorA.jpg;GR-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Dionysius" height="62" width="63">+/null/piece;;;GR-LDR-dionysius.jpg;GR-Ldr-Dionysius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Cleonymus" height="62" width="62">+/null/piece;;;GR-LDR-cleonymus.jpg;GR-Ldr-Cleonymus/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Alexander" height="62" width="63">+/null/piece;;;GR-LDR-alexander.jpg;GR-Ldr-Alexander/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GR-Ldr-Agathocles" height="63" width="63">+/null/piece;;;GR-LDR-agathocles.jpg;GR-Ldr-Agathocles/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="Gaul-Ldr" owningBoard="Leaders" x="300" y="200">
+<VASSAL.build.widget.PieceSlot entryName="ES-Ldr-MinorB" height="63" width="63">+/null/piece;;;ES-LDR-MinorB.jpg;ES-Ldr-MinorB/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ES-Ldr-MinorA" height="63" width="62">+/null/piece;;;ES-LDR-MinorA.jpg;ES-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="ES-Ldr-Numisius" height="63" width="62">+/null/piece;;;ES-LDR-numisius.jpg;ES-Ldr-Numisius/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="ET-Ldr" owningBoard="Leaders" x="130" y="400">
+<VASSAL.build.widget.PieceSlot entryName="GA-Ldr-MinorC" height="63" width="63">+/null/piece;;;GAUL-LDR-MinorC.jpg;GA-Ldr-MinorC/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GA-Ldr-MinorB" height="63" width="62">+/null/piece;;;GAUL-LDR-MinorB.jpg;GA-Ldr-MinorB/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GA-Ldr-MinorA" height="63" width="62">+/null/piece;;;GAUL-LDR-MinorA.jpg;GA-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="GA-Ldr-Brennus" height="63" width="63">+/null/piece;;;GAUL-LDR-Brennus.jpg;GA-Ldr-Brennus/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="SAM-Ldr" owningBoard="Leaders" x="210" y="400">
+<VASSAL.build.widget.PieceSlot entryName="SAM-Ldr-MinorB" height="63" width="63">+/null/piece;;;SAM-LDR-MinorB.jpg;SAM-Ldr-MinorB/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-Ldr-MinorA" height="63" width="62">+/null/piece;;;SAM-LDR-MinorA.jpg;SAM-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-Ldr-Pontius" height="63" width="62">+/null/piece;;;SAM-LDR-pontius.jpg;SAM-Ldr-Pontius/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="SAM-Ldr-Egnatius" height="63" width="62">+/null/piece;;;SAM-LDR-egnatius.jpg;SAM-Ldr-Egnatius/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="CA-Ldr" owningBoard="Leaders" x="380" y="400">
+<VASSAL.build.widget.PieceSlot entryName="CA-Ldr-MinorA" height="63" width="63">+/null/piece;;;CA-LDR-MinorA.jpg;CA-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-Ldr-Hamilcar" height="63" width="62">+/null/piece;;;CA-LDR-Hamilcar.jpg;CA-Ldr-Hamilcar/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="CA-Ldr-Bomilcar" height="63" width="62">+/null/piece;;;CA-LDR-Bomilcar.jpg;CA-Ldr-Bomilcar/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.SetupStack name="Other-Ldr" owningBoard="Leaders" x="380" y="250">
+<VASSAL.build.widget.PieceSlot entryName="TG-Ldr-MinorA" height="63" width="63">+/null/piece;;;TA-Gaul-LDR-MinorA.jpg;TG-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+<VASSAL.build.widget.PieceSlot entryName="VO-Ldr-MinorA" height="63" width="62">+/null/piece;;;Volscii-LDR-MinorA.jpg;VO-Ldr-MinorA/null;0;0</VASSAL.build.widget.PieceSlot>
+</VASSAL.build.module.map.SetupStack>
+<VASSAL.build.module.map.Zoomer factor="1.5" inButtonText="" inIconName="/images/zoomIn.gif" inTooltip="Zoom in" max="3" outButtonText="" outIconName="/images/zoomOut.gif" outTooltip="Zoom out" zoomInKey="" zoomOutKey="" zoomStart="1"/>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.module.Map>
+<VASSAL.build.module.DiceButton hotkey="" icon="" nDice="1" nSides="6" name="dice1" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="true" text="Roll 1d6"/>
+<VASSAL.build.module.DiceButton hotkey="" icon="" nDice="2" nSides="6" name="dice2" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="Roll 2d6"/>
+<VASSAL.build.module.DiceButton hotkey="" icon="" nDice="3" nSides="6" name="dice3" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$playerName$&gt;" reportTotal="false" text="Roll 3d6"/>
+<VASSAL.build.module.NotesWindow buttonText="Notes" hotkey="" icon="/images/notes.gif"/>
+<VASSAL.build.module.PredefinedSetup isMenu="true" name="Scenarios" useFile="true">
+<VASSAL.build.module.PredefinedSetup file="sword-setup-4Player-004.sav" isMenu="false" name="4-Player Game" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="sword-setup-3Player-004.sav" isMenu="false" name="3-Player Game" useFile="true"/>
+<VASSAL.build.module.PredefinedSetup file="sword-setup-2Player-004.sav" isMenu="false" name="2-Player Game" useFile="true"/>
+</VASSAL.build.module.PredefinedSetup>
+<VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+<VASSAL.build.module.gamepieceimage.ColorManager/>
+<VASSAL.build.module.gamepieceimage.FontManager>
+<VASSAL.build.module.gamepieceimage.FontStyle name="Default" style="Dialog,0,12,false"/>
+</VASSAL.build.module.gamepieceimage.FontManager>
+<VASSAL.build.module.gamepieceimage.GamePieceLayoutsContainer/>
+</VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
+<VASSAL.build.module.properties.GlobalProperties/>
+</VASSAL.build.GameModule>
